@@ -6,9 +6,8 @@ define root view entity ZCPF_EMPLOYEE
  as projection on ZRPF_EMPLOYEE
 {
     key Id,
-    
     EmployeeNumber,
-    @Search.defaultSearchElement: true
+     @Search.defaultSearchElement: true
     @Search.fuzzinessThreshold: 0.7
     FirstName,
      @Search.defaultSearchElement: true
