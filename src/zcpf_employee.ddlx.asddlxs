@@ -1,0 +1,49 @@
+@Metadata.layer: #CUSTOMER
+@UI.headerInfo: 
+{ 
+    typeNamePlural: 'Employees',
+    typeName      : 'Employee'
+}
+annotate entity ZCPF_EMPLOYEE
+    with 
+{
+ /* Facets */
+  @UI.facet:
+ [
+ { position: 10, type: #FIELDGROUP_REFERENCE, targetQualifier: 'EmployeeDetails', label: 'Employee Details' },
+ { position: 20, type: #FIELDGROUP_REFERENCE, targetQualifier: 'AdminData', label: 'Administrative Data' }
+ ]
+  
+  /* Field */
+  
+    @UI.fieldGroup: [{ position: 10, qualifier: 'AdminData' }]
+    Id;
+    
+    @UI.lineItem: [{ position: 10}]
+    @UI.fieldGroup: [{ position: 10, qualifier: 'EmployeeDetails' }]
+    EmployeeNumber;
+    
+    @UI.lineItem: [{ position: 20}]
+    @UI.fieldGroup: [{ position: 20, qualifier: 'EmployeeDetails' }]
+    FirstName;
+    
+    @UI.lineItem: [{ position: 30}]
+    @UI.fieldGroup: [{ position: 30, qualifier: 'EmployeeDetails' }]
+    LastName;
+    
+    @UI.lineItem: [{ position: 40}]
+    @UI.fieldGroup: [{ position: 40, qualifier: 'EmployeeDetails' }]
+    EntryDate;
+    
+     @UI.fieldGroup: [{ position: 20, qualifier: 'AdminData' }]
+    CreatedBy;
+    
+     @UI.fieldGroup: [{ position: 30, qualifier: 'AdminData' }]
+    CreatedAt;
+    
+     @UI.fieldGroup: [{ position: 40, qualifier: 'AdminData' }]
+    LastChangedBy;
+    
+     @UI.fieldGroup: [{ position: 50, qualifier: 'AdminData' }]
+    LastChangedAt;
+}
