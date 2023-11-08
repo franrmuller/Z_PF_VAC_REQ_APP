@@ -9,7 +9,6 @@ CLASS zpf_employee_generator DEFINITION
 ENDCLASS.
 
 
-
 CLASS zpf_employee_generator IMPLEMENTATION.
 
    METHOD if_oo_adt_classrun~main.
