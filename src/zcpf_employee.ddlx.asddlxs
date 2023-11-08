@@ -2,7 +2,8 @@
 @UI.headerInfo: 
 { 
     typeNamePlural: 'Employees',
-    typeName      : 'Employee'
+    typeName      : 'Employee',
+    title.value: 'LastName'
 }
 annotate entity ZCPF_EMPLOYEE
     with 

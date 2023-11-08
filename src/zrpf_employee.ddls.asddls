@@ -4,8 +4,8 @@ define root view entity ZRPF_EMPLOYEE as select from zpf_employee
 //composition of target_data_source_name as _association_name
 {
     key id as Id,
-    employee_number as EmployeeNumber,
     first_name as FirstName,
+    employee_number as EmployeeNumber,
     last_name as LastName,
     entry_date as EntryDate,
     created_by as CreatedBy,

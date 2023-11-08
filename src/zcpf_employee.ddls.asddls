@@ -7,15 +7,22 @@ define root view entity ZCPF_EMPLOYEE
 {
     key Id,
     EmployeeNumber,
-     @Search.defaultSearchElement: true
+    
+    @Search.defaultSearchElement: true
     @Search.fuzzinessThreshold: 0.7
     FirstName,
-     @Search.defaultSearchElement: true
+    
+    @Search.defaultSearchElement: true
     @Search.fuzzinessThreshold: 0.7
     LastName,
+    
     EntryDate,
+    
     CreatedBy,
+    
     CreatedAt,
+    
     LastChangedBy,
+    
     LastChangedAt
 }
