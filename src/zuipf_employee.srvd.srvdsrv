@@ -1,4 +1,0 @@
-@EndUserText.label: 'Employee'
-define service ZUIPF_EMPLOYEE {
-  expose ZCPF_EMPLOYEE as Employee;
-}
