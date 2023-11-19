@@ -6,7 +6,10 @@
 "ZPF_EMPLOYEE"
 ],
 "ASSOCIATED":
-[],
+[
+"ZRPF_VAC_ENT",
+"ZRPF_VAC_REQ"
+],
 "BASE":
 [],
 "ANNO_REF":

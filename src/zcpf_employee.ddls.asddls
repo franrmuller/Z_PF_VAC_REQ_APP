@@ -24,5 +24,8 @@ define root view entity ZCPF_EMPLOYEE
     
     LastChangedBy,
     
-    LastChangedAt
+    LastChangedAt,
+    
+    _VacationEntitlements : redirected to composition child ZCPF_VAC_ENT,
+    _VacationRequests : redirected to composition child ZCPF_VAC_REQ
 }

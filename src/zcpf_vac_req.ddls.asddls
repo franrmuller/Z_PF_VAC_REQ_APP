@@ -1,6 +1,6 @@
 @AccessControl.authorizationCheck: #NOT_REQUIRED
 @EndUserText.label: 'Vacation Request'
-define root view entity ZCPF_VAC_REQ as projection on ZRPF_VAC_REQ
+define view entity ZCPF_VAC_REQ as projection on ZRPF_VAC_REQ
 {
     key Id,
     Applicant,
@@ -12,6 +12,8 @@ define root view entity ZCPF_VAC_REQ as projection on ZRPF_VAC_REQ
     CreatedBy,
     CreatedAt,
     LastChangedBy,
-    LastChangedAt
+    LastChangedAt,
+    
+    _Employee : redirected to parent ZCPF_EMPLOYEE
 
 }

@@ -1,6 +1,6 @@
 @AccessControl.authorizationCheck: #NOT_REQUIRED
 @EndUserText.label: 'Vacation Entitlement'
-define root view entity ZCPF_VAC_ENT 
+define view entity ZCPF_VAC_ENT 
 as projection on ZRPF_VAC_ENT
 {
     key ID,
@@ -10,7 +10,7 @@ as projection on ZRPF_VAC_ENT
     CreatedBy,
     CreatedAt,
     LastChangedBy,
-    LastChangedAt
+    LastChangedAt,
     
-    //_association_name // Make association public
+    _Employee : redirected to parent ZCPF_EMPLOYEE
 }

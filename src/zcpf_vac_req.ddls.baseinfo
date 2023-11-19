@@ -6,9 +6,14 @@
 "ZRPF_VAC_REQ"
 ],
 "ASSOCIATED":
-[],
+[
+"ZCPF_EMPLOYEE",
+"ZRPF_EMPLOYEE"
+],
 "BASE":
-[],
+[
+"ZRPF_VAC_REQ"
+],
 "ANNO_REF":
 [],
 "SCALAR_FUNCTION":

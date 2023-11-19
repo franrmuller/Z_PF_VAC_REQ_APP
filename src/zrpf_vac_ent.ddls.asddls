@@ -1,6 +1,8 @@
 @AccessControl.authorizationCheck: #NOT_REQUIRED
 @EndUserText.label: 'Vacation Entitlement'
-define root view entity ZRPF_VAC_ENT as select from zpf_vac_ent
+define view entity ZRPF_VAC_ENT 
+as select from zpf_vac_ent
+association to parent ZRPF_EMPLOYEE as _Employee on $projection.ID = _Employee.Id
 // composition of target_data_source_name as _association_name
 {
    key id as ID,
@@ -10,7 +12,7 @@ define root view entity ZRPF_VAC_ENT as select from zpf_vac_ent
    created_by as CreatedBy,
    created_at as CreatedAt,
    last_changed_by as LastChangedBy,
-    last_changed_at as LastChangedAt
+   last_changed_at as LastChangedAt,
     
-    // association_name Make association public
+    _Employee
 }
