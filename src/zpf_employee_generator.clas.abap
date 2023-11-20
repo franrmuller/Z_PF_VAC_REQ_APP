@@ -66,7 +66,8 @@ employee-employee_number = 1.
 
 " Create Vacation Entitlements
 
-vacationEntitlement-employee = 'Hans Maier'.
+vacationEntitlement-employee = 'Hans Maier'.    "Primary Key is ID (UUID) with raw(16) here put
+" sth like that vacationEntitlement-employee = employee-id.
 vacationEntitlement-year_of_vacation = 2022.
 vacationEntitlement-number_of_vacation_days = 30.
 vacationEntitlement-created_by = 'GENERATOR'.
@@ -75,7 +76,7 @@ vacationEntitlement-last_changed_by = 'generator'.
 get time stamp field vacationEntitlement-last_changed_at.
 append vacationEntitlement to vacationEntitlements.
 
-vacationEntitlement-employee = 'Hans Maier'.
+vacationEntitlement-employee = 'Hans Maier'. " see above
 vacationEntitlement-year_of_vacation = 2023.
 vacationEntitlement-number_of_vacation_days = 30.
 vacationEntitlement-created_by = 'GENERATOR'.
@@ -84,7 +85,7 @@ vacationEntitlement-last_changed_by = 'generator'.
 get time stamp field vacationEntitlement-last_changed_at.
 append vacationEntitlement to vacationEntitlements.
 
-vacationEntitlement-employee = 'Lisa Müller'.
+vacationEntitlement-employee = 'Lisa Müller'.   " see above
 vacationEntitlement-year_of_vacation = 2023.
 vacationEntitlement-number_of_vacation_days = 30.
 vacationEntitlement-created_by = 'GENERATOR'.
@@ -93,7 +94,7 @@ vacationEntitlement-last_changed_by = 'generator'.
 get time stamp field vacationEntitlement-last_changed_at.
 append vacationEntitlement to vacationEntitlements.
 
-vacationEntitlement-employee = 'Petra Schmid'.
+vacationEntitlement-employee = 'Petra Schmid'.  " see above
 vacationEntitlement-year_of_vacation = 2023.
 vacationEntitlement-number_of_vacation_days = 7.
 vacationEntitlement-created_by = 'GENERATOR'.
@@ -105,8 +106,8 @@ append vacationEntitlement to vacationEntitlements.
 
 " Create Vacation Requests
 
-vacationRequest-applicant = 'Hans Maier'.
-vacationRequest-approver = 'Lisa Müller'.
+vacationRequest-applicant = 'Hans Maier'.   " see above
+vacationRequest-approver = 'Lisa Müller'.   " see above
 vacationRequest-begin_date = 20220701.
 vacationRequest-end_date = 20220710.
 vacationRequest-commentary = 'Sommerurlaub'.
@@ -116,8 +117,8 @@ vacationRequest-last_changed_by = 'generator'.
 get time stamp field vacationRequest-last_changed_at.
 append vacationRequest to vacationRequests.
 
-vacationRequest-applicant = 'Hans Maier'.
-vacationRequest-approver = 'Lisa Müller'.
+vacationRequest-applicant = 'Hans Maier'.   " see above
+vacationRequest-approver = 'Lisa Müller'.   " see above
 vacationRequest-begin_date = 20221227.
 vacationRequest-end_date = 20221230.
 vacationRequest-commentary = 'Weihnachtsurlaub'.
@@ -127,8 +128,8 @@ vacationRequest-last_changed_by = 'generator'.
 get time stamp field vacationRequest-last_changed_at.
 append vacationRequest to vacationRequests.
 
-vacationRequest-applicant = 'Hans Maier'.
-vacationRequest-approver = 'Lisa Müller'.
+vacationRequest-applicant = 'Hans Maier'.    " see above
+vacationRequest-approver = 'Lisa Müller'.   " see above
 vacationRequest-begin_date = 20221228.
 vacationRequest-end_date = 20221230.
 vacationRequest-commentary = 'Weihnachtsurlaub (2. Versuch'.
@@ -138,8 +139,8 @@ vacationRequest-last_changed_by = 'generator'.
 get time stamp field vacationRequest-last_changed_at.
 append vacationRequest to vacationRequests.
 
-vacationRequest-applicant = 'Hans Maier'.
-vacationRequest-approver = 'Lisa Müller'.
+vacationRequest-applicant = 'Hans Maier'.   " see above
+vacationRequest-approver = 'Lisa Müller'.   " see above
 vacationRequest-begin_date = 202330527.
 vacationRequest-end_date = 20230614.
 vacationRequest-commentary = ''.
@@ -149,8 +150,8 @@ vacationRequest-last_changed_by = 'generator'.
 get time stamp field vacationRequest-last_changed_at.
 append vacationRequest to vacationRequests.
 
-vacationRequest-applicant = 'Hans Maier'.
-vacationRequest-approver = 'Lisa Müller'.
+vacationRequest-applicant = 'Hans Maier'.   " see above
+vacationRequest-approver = 'Lisa Müller'.   " see above
 vacationRequest-begin_date = 20231220.
 vacationRequest-end_date = 20231231.
 vacationRequest-commentary = 'Winterurlaub'.
@@ -160,8 +161,8 @@ vacationRequest-last_changed_by = 'generator'.
 get time stamp field vacationRequest-last_changed_at.
 append vacationRequest to vacationRequests.
 
-vacationRequest-applicant = 'Petra Schimd'.
-vacationRequest-approver = 'Hans Maier'.
+vacationRequest-applicant = 'Petra Schimd'. " see above
+vacationRequest-approver = 'Hans Maier'.    " see above
 vacationRequest-begin_date = 20231227.
 vacationRequest-end_date = 20231231.
 vacationRequest-commentary = 'Weihnachtsurlaub'.
