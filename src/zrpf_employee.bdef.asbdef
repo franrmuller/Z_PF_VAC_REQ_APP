@@ -1,0 +1,94 @@
+managed implementation in class zbp_rpf_employee unique;
+strict ( 2 );
+with draft;
+
+// Root Entity Employee
+define behavior for ZRPF_EMPLOYEE alias Employee
+persistent table zpf_employee
+draft table zpf_employee_d
+lock master
+total etag LastChangedAt
+authorization master ( instance )
+//etag master <field_name>
+{
+  create;
+  update;
+  delete;
+  association _VacationEntitlements { create; with draft; }
+  association _VacationRequests { create; with draft; }
+
+  draft action Activate optimized;
+  draft action Discard;
+  draft action Edit;
+  draft determine action Prepare;
+  draft action Resume;
+
+  field ( readonly, numbering: managed ) Id;
+
+  mapping for zpf_employee corresponding {
+   Id = id;
+   FirstName = first_name;
+   EmployeeNumber = employee_number;
+   LastName = last_name;
+   EntryDate = entry_date;
+   CreatedBy = created_by;
+   CreatedAt = created_at;
+   LastChangedBy = last_changed_by;
+   LastChangedAt = last_changed_at;
+   }
+}
+
+define behavior for ZRPF_VAC_ENT alias VacationEntitlement
+persistent table zpf_vac_ent
+draft table zpf_vac_ent_d
+lock dependent by _Employee
+authorization dependent by _Employee
+//etag master <field_name>
+{
+  update;
+  delete;
+  field ( readonly, numbering : managed ) VacationEntitlementID;
+  field ( readonly ) Employee;
+  association _Employee {with draft;}
+
+  mapping for zpf_vac_ent corresponding
+  {
+   VacationEntitlementId = id;
+   Employee = employee;
+   YearOfVacation = year_of_vacation;
+   NumberOfVacationDays = number_of_vacation_days;
+   CreatedBy = created_by;
+   CreatedAt = created_at;
+   LastChangedBy = last_changed_by;
+   LastChangedAt = last_changed_at;
+  }
+}
+
+define behavior for ZRPF_VAC_REQ alias VacationRequests
+persistent table zpf_vac_req
+draft table zpf_vac_req_d
+lock dependent by _Employee
+authorization dependent by _Employee
+//etag master <field_name>
+{
+  update;
+  delete;
+  field ( readonly, numbering : managed ) VacationRequestId;
+  field (readonly) Applicant;
+  association _Employee {with draft;}
+
+  mapping for zpf_vac_req corresponding
+  {
+  VacationRequestId = id;
+  Applicant = applicant;
+  Approver = approver;
+  BeginDate = begin_date;
+  EndDate = end_date;
+  Commentary = commentary;
+  Status = status;
+  CreatedBy = created_by;
+  CreatedAt = created_at;
+  LastChangedBy = last_changed_by;
+  LastChangedAt = last_changed_at;
+    }
+}

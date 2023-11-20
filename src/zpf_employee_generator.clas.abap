@@ -73,49 +73,45 @@ out->write(  |Deleted Vacation Requests: { sy-dbcnt }| ).
 
 " Create Vacation Entitlements
 
-vacationEntitlement-employee = 'Hans Maier'.
+vacationEntitlement-employee = employee-Id.
 vacationEntitlement-client        = sy-mandt.
 vacationEntitlement-year_of_vacation = 2022.
 vacationEntitlement-number_of_vacation_days = 30.
 vacationEntitlement-created_by = 'GENERATOR'.
 vacationEntitlement-id = cl_system_uuid=>create_uuid_x16_static( ).
-vacationEntitlement-id = employee-id.
 get time stamp field vacationEntitlement-created_at.
 vacationEntitlement-last_changed_by = 'generator'.
 get time stamp field vacationEntitlement-last_changed_at.
 append vacationEntitlement to vacationEntitlements.
 
-vacationEntitlement-employee = 'Hans Maier'.
+vacationEntitlement-employee = employee-Id.
 vacationEntitlement-client        = sy-mandt.
 vacationEntitlement-year_of_vacation = 2023.
 vacationEntitlement-number_of_vacation_days = 30.
 vacationEntitlement-created_by = 'GENERATOR'.
 vacationEntitlement-id = cl_system_uuid=>create_uuid_x16_static( ).
-vacationEntitlement-id = employee-id.
 get time stamp field vacationEntitlement-created_at.
 vacationEntitlement-last_changed_by = 'generator'.
 get time stamp field vacationEntitlement-last_changed_at.
 append vacationEntitlement to vacationEntitlements.
 
-vacationEntitlement-employee = 'Lisa Müller'.
+vacationEntitlement-employee = employee-Id.
 vacationEntitlement-client        = sy-mandt.
 vacationEntitlement-year_of_vacation = 2023.
 vacationEntitlement-number_of_vacation_days = 30.
 vacationEntitlement-created_by = 'GENERATOR'.
 vacationEntitlement-id = cl_system_uuid=>create_uuid_x16_static( ).
-vacationEntitlement-id = employee-id.
 get time stamp field vacationEntitlement-created_at.
 vacationEntitlement-last_changed_by = 'generator'.
 get time stamp field vacationEntitlement-last_changed_at.
 append vacationEntitlement to vacationEntitlements.
 
-vacationEntitlement-employee = 'Petra Schmid'.
+vacationEntitlement-employee = employee-Id.
 vacationEntitlement-client        = sy-mandt.
 vacationEntitlement-year_of_vacation = 2023.
 vacationEntitlement-number_of_vacation_days = 7.
 vacationEntitlement-created_by = 'GENERATOR'.
 vacationEntitlement-id = cl_system_uuid=>create_uuid_x16_static( ).
-vacationEntitlement-id = employee-id.
 get time stamp field vacationEntitlement-created_at.
 vacationEntitlement-last_changed_by = 'generator'.
 get time stamp field vacationEntitlement-last_changed_at.
@@ -124,85 +120,79 @@ append vacationEntitlement to vacationEntitlements.
 
 " Create Vacation Requests
 
-vacationRequest-applicant = 'Hans Maier'.
+vacationRequest-applicant = employee-Id.
 vacationRequest-client        = sy-mandt.
-vacationRequest-approver = 'Lisa Müller'.
-vacationRequest-begin_date = 20220701.
-vacationRequest-end_date = 20220710.
+vacationRequest-approver = employee-Id.
+vacationRequest-begin_date = '20220701'.
+vacationRequest-end_date = '20220710'.
 vacationRequest-commentary = 'Sommerurlaub'.
 vacationRequest-status = 'A'.
 vacationRequest-id = cl_system_uuid=>create_uuid_x16_static( ).
-vacationRequest-id = employee-id.
 get time stamp field vacationRequest-created_at.
 vacationRequest-last_changed_by = 'generator'.
 get time stamp field vacationRequest-last_changed_at.
 append vacationRequest to vacationRequests.
 
-vacationRequest-applicant = 'Hans Maier'.
+vacationRequest-applicant = employee-Id.
 vacationRequest-client        = sy-mandt.
-vacationRequest-approver = 'Lisa Müller'.
-vacationRequest-begin_date = 20221227.
-vacationRequest-end_date = 20221230.
+vacationRequest-approver = employee-Id.
+vacationRequest-begin_date = '20221227'.
+vacationRequest-end_date = '20221230'.
 vacationRequest-commentary = 'Weihnachtsurlaub'.
 vacationRequest-status = 'C'.
 vacationRequest-id = cl_system_uuid=>create_uuid_x16_static( ).
-vacationRequest-id = employee-id.
 get time stamp field vacationRequest-created_at.
 vacationRequest-last_changed_by = 'generator'.
 get time stamp field vacationRequest-last_changed_at.
 append vacationRequest to vacationRequests.
 
-vacationRequest-applicant = 'Hans Maier'.
+vacationRequest-applicant = employee-Id.
 vacationRequest-client        = sy-mandt.
-vacationRequest-approver = 'Lisa Müller'.
-vacationRequest-begin_date = 20221228.
-vacationRequest-end_date = 20221230.
+vacationRequest-approver = employee-Id.
+vacationRequest-begin_date = '20221228'.
+vacationRequest-end_date = '20221230'.
 vacationRequest-commentary = 'Weihnachtsurlaub (2. Versuch'.
 vacationRequest-status = 'A'.
 vacationRequest-id = cl_system_uuid=>create_uuid_x16_static( ).
-vacationRequest-id = employee-id.
 get time stamp field vacationRequest-created_at.
 vacationRequest-last_changed_by = 'generator'.
 get time stamp field vacationRequest-last_changed_at.
 append vacationRequest to vacationRequests.
 
-vacationRequest-applicant = 'Hans Maier'.
+vacationRequest-applicant = employee-Id.
 vacationRequest-client        = sy-mandt.
-vacationRequest-approver = 'Lisa Müller'.
-vacationRequest-begin_date = 202330527.
-vacationRequest-end_date = 20230614.
+vacationRequest-approver = employee-Id.
+vacationRequest-begin_date = '20230527'.
+vacationRequest-end_date = '20230614'.
 vacationRequest-commentary = ''.
 vacationRequest-status = 'A'.
 vacationRequest-id = cl_system_uuid=>create_uuid_x16_static( ).
-vacationRequest-id = employee-id.
 get time stamp field vacationRequest-created_at.
 vacationRequest-last_changed_by = 'generator'.
 get time stamp field vacationRequest-last_changed_at.
 append vacationRequest to vacationRequests.
 
-vacationRequest-applicant = 'Hans Maier'.
+vacationRequest-applicant = employee-Id.
 vacationRequest-client        = sy-mandt.
-vacationRequest-approver = 'Lisa Müller'.
-vacationRequest-begin_date = 20231220.
-vacationRequest-end_date = 20231231.
+vacationRequest-approver = employee-Id.
+vacationRequest-begin_date = '20231220'.
+vacationRequest-end_date = '20231231'.
 vacationRequest-commentary = 'Winterurlaub'.
 vacationRequest-status = 'R'.
 vacationRequest-id = cl_system_uuid=>create_uuid_x16_static( ).
-vacationRequest-id = employee-id.
 get time stamp field vacationRequest-created_at.
 vacationRequest-last_changed_by = 'generator'.
 get time stamp field vacationRequest-last_changed_at.
 append vacationRequest to vacationRequests.
 
-vacationRequest-applicant = 'Petra Schimd'.
+vacationRequest-applicant = employee-Id.
 vacationRequest-client        = sy-mandt.
-vacationRequest-approver = 'Hans Maier'.
-vacationRequest-begin_date = 20231227.
-vacationRequest-end_date = 20231231.
+vacationRequest-approver = employee-Id.
+vacationRequest-begin_date = '20231227'.
+vacationRequest-end_date = '20231231'.
 vacationRequest-commentary = 'Weihnachtsurlaub'.
 vacationRequest-status = 'R'.
 vacationRequest-id = cl_system_uuid=>create_uuid_x16_static( ).
-vacationRequest-id = employee-id.
 get time stamp field vacationRequest-created_at.
 vacationRequest-last_changed_by = 'generator'.
 get time stamp field vacationRequest-last_changed_at.

@@ -18,7 +18,7 @@ annotate entity ZCPF_EMPLOYEE
   /* Field */
   
     @UI.fieldGroup: [{ position: 10, qualifier: 'AdminData' }]
-    Id;
+    employeeid;
     
     @UI.lineItem: [{ position: 10}]
     @UI.fieldGroup: [{ position: 10, qualifier: 'EmployeeDetails' }]

@@ -3,8 +3,8 @@
 define view entity ZCPF_VAC_ENT 
 as projection on ZRPF_VAC_ENT
 {
-    key ID,
-    
+    key VacationEntitlementID,
+    Employee,
     YearOfVacation,
     NumberOfVacationDays,
     CreatedBy,

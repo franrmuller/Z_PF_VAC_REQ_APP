@@ -2,7 +2,7 @@
 @EndUserText.label: 'Vacation Request'
 define view entity ZCPF_VAC_REQ as projection on ZRPF_VAC_REQ
 {
-    key Id,
+    key VacationRequestId,
     Applicant,
     Approver,
     BeginDate,

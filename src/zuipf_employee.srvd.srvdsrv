@@ -1,4 +1,6 @@
 @EndUserText.label: 'Employee'
 define service ZUIPF_EMPLOYEE {
   expose ZCPF_EMPLOYEE as Employee;
+  expose ZCPF_VAC_ENT  as VacationEntitlement;
+  expose ZCPF_VAC_REQ  as VacationRequest;
 }

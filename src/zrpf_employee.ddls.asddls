@@ -2,9 +2,10 @@
 @EndUserText.label: 'Employee'
 define root view entity ZRPF_EMPLOYEE 
 as select from zpf_employee
-composition [1..1] of ZRPF_VAC_ENT as _VacationEntitlements
+composition [0..*] of ZRPF_VAC_ENT as _VacationEntitlements
 composition [0..*] of ZRPF_VAC_REQ as _VacationRequests
 {
+    @EndUserText: {label: 'Employee ID', quickInfo: 'Employee ID'}
     key id as Id,
     first_name as FirstName,
     employee_number as EmployeeNumber,
