@@ -20,6 +20,7 @@ define root view entity ZCPF_EMPLOYEE
     
     EntryDate,
     
+    /* Administrative Data */
     CreatedBy,
     
     CreatedAt,
@@ -28,6 +29,10 @@ define root view entity ZCPF_EMPLOYEE
     
     LastChangedAt,
     
+    /* Transient Data */
+    EmployeeName,
+    
+    /* Associations */
     _VacationEntitlements : redirected to composition child ZCPF_VAC_ENT,
     _VacationRequests : redirected to composition child ZCPF_VAC_REQ
 }

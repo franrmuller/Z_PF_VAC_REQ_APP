@@ -5,7 +5,6 @@ as select from zpf_employee
 {
   key id                                 as Id,
       first_name as FirstName,
-    employee_number as EmployeeNumber,
     last_name as LastName,
 
       /* Transient Data */
