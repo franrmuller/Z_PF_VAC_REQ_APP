@@ -1,5 +1,6 @@
 @AccessControl.authorizationCheck: #NOT_REQUIRED
 @EndUserText.label: 'Vacation Entitlement'
+@Metadata.allowExtensions: true
 define view entity ZCPF_VAC_ENT 
 as projection on ZRPF_VAC_ENT
 {

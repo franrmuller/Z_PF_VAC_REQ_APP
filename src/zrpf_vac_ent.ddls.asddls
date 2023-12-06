@@ -1,5 +1,6 @@
 @AccessControl.authorizationCheck: #NOT_REQUIRED
 @EndUserText.label: 'Vacation Entitlement'
+@Metadata.allowExtensions: true
 define view entity ZRPF_VAC_ENT 
 as select from zpf_vac_ent
 association to parent ZRPF_EMPLOYEE as _Employee on $projection.Employee = _Employee.Id

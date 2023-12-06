@@ -5,23 +5,27 @@
     typeName      : 'Employee',
     title.value: 'LastName'
 }
-annotate entity ZCPF_EMPLOYEE
+annotate view ZCPF_EMPLOYEE
     with 
 {
+
  /* Facets */
   @UI.facet:
  [
  { position: 10, type: #FIELDGROUP_REFERENCE, targetQualifier: 'EmployeeDetails', label: 'Employee Details' },
- { position: 20, type: #FIELDGROUP_REFERENCE, targetQualifier: 'AdminData', label: 'Administrative Data' }
+ { position: 20, type: #FIELDGROUP_REFERENCE, targetQualifier: 'AdminData', label: 'Administrative Data' },
+ { position: 30, type: #LINEITEM_REFERENCE, targetElement: '_VacationEntitlements', label: 'Vacation Entitlements' },
+ { position: 30, type: #LINEITEM_REFERENCE, targetElement: '_VacationRequests', label: 'Vacation Requests' }
  ]
-  
+ 
   /* Field */
   
     @UI.fieldGroup: [{ position: 10, qualifier: 'AdminData' }]
-    employeeid;
+    Id;
     
     @UI.lineItem: [{ position: 10}]
     @UI.fieldGroup: [{ position: 10, qualifier: 'EmployeeDetails' }]
+    @UI.selectionField: [{ position:10 }]
     EmployeeNumber;
     
     @UI.lineItem: [{ position: 20}]
@@ -34,6 +38,7 @@ annotate entity ZCPF_EMPLOYEE
     
     @UI.lineItem: [{ position: 40}]
     @UI.fieldGroup: [{ position: 40, qualifier: 'EmployeeDetails' }]
+    @UI.selectionField: [{ position:10 }]
     EntryDate;
     
      @UI.fieldGroup: [{ position: 20, qualifier: 'AdminData' }]

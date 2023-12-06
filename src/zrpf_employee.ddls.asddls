@@ -4,6 +4,7 @@ define root view entity ZRPF_EMPLOYEE
 as select from zpf_employee
 composition [0..*] of ZRPF_VAC_ENT as _VacationEntitlements
 composition [0..*] of ZRPF_VAC_REQ as _VacationRequests
+
 {
     @EndUserText: {label: 'Employee ID', quickInfo: 'Employee ID'}
     key id as Id,
@@ -15,6 +16,8 @@ composition [0..*] of ZRPF_VAC_REQ as _VacationRequests
     created_at as CreatedAt,
     last_changed_by as LastChangedBy,
     last_changed_at as LastChangedAt,
+    
+    
     
     _VacationEntitlements,
     _VacationRequests

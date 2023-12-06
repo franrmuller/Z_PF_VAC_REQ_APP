@@ -3,6 +3,7 @@
 @Search.searchable: true
 @Metadata.allowExtensions: true
 define root view entity ZCPF_EMPLOYEE
+ provider contract transactional_query
  as projection on ZRPF_EMPLOYEE
 {
     key Id,
