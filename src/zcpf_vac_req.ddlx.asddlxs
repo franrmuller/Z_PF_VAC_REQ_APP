@@ -5,6 +5,7 @@
     typeName      : 'Vacation Requests',
     title.value: 'VacationRequestId'
 }
+@UI.presentationVariant: [{sortOrder: [{ by: 'BeginDate', direction: #DESC }]}]
 annotate view ZCPF_VAC_REQ
     with 
 {
@@ -35,6 +36,10 @@ annotate view ZCPF_VAC_REQ
     @UI.lineItem: [{ position: 40}]
     @UI.fieldGroup: [{ position: 40, qualifier: 'VacationRequestDetails' }]
     EndDate;
+    
+    @UI.lineItem: [{ position: 45}]
+    @UI.fieldGroup: [{ position: 45, qualifier: 'VacationRequestDetails' }]
+    vacationdays;
     
     @UI.lineItem: [{ position: 50}]
     @UI.fieldGroup: [{ position: 50, qualifier: 'VacationRequestDetails' }]

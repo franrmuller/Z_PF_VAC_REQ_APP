@@ -7,7 +7,7 @@ association to parent ZRPF_EMPLOYEE as _Employee on $projection.Employee = _Empl
 // composition of target_data_source_name as _association_name
 {
    @EndUserText: {label: 'Vacation Entitlement ID', quickInfo: 'Vac. Ent. ID'}
-   key id as VacationEntitlementID,
+   key id as VacationEntitlementId,
    @EndUserText: {label: 'Employee ID', quickInfo: 'Employee ID'}
    employee as Employee,
    year_of_vacation as YearOfVacation,

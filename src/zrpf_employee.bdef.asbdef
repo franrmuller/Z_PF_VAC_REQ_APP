@@ -17,6 +17,9 @@ authorization master ( instance )
   association _VacationEntitlements { create; with draft; }
   association _VacationRequests { create; with draft; }
 
+  validation ValidateDates on save { create;}
+  validation ValidateRequest on save { create; }
+
   draft action Activate optimized;
   draft action Discard;
   draft action Edit;
@@ -74,9 +77,26 @@ authorization dependent by _Employee
 {
   update;
   delete;
-  field ( readonly, numbering : managed ) VacationRequestId;
-  field (readonly) Applicant;
+
   association _Employee {with draft;}
+
+  action ApproveRequest result [1] $self;
+  action DeclineRequest result [1] $self;
+
+  determination DetermineStatus on modify { create; }
+  determination DetermineStatusRequestComment on modify { field Commentary; }
+
+  determine action ValidateRequest
+  {
+    validation ValidateDates;
+  }
+  validation ValidateDates on save { create; }
+
+  field ( readonly, numbering : managed ) VacationRequestId;
+  field (mandatory : create ) BeginDate, EndDate, Approver;
+  field (readonly : update ) BeginDate, EndDate, Approver;
+  field (readonly) Applicant, Status, VacationDays,
+  CreatedAt, CreatedBy, LastChangedBy, LastChangedAt;
 
   mapping for zpf_vac_req corresponding
   {

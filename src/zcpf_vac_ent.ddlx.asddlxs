@@ -3,44 +3,48 @@
 { 
     typeNamePlural: 'Vacation Entitlement',
     typeName      : 'Vacation Entitlements',
-    title.value: 'Employee'
+    title.value: '_Employee.EmployeeName' 
 }
 annotate view ZCPF_VAC_ENT
     with 
 {
- /* Facets */
+  
+  /* Facets */
   @UI.facet:
- [
- { position: 10, type: #FIELDGROUP_REFERENCE, targetQualifier: 'VacationEntitlementDetails', label: 'Vacatoin Entitlement Details' },
- { position: 20, type: #FIELDGROUP_REFERENCE, targetQualifier: 'AdminData', label: 'Administrative Data' }
- ]
-  
-  /* Field */
-  
-    @UI.fieldGroup: [{ position: 10, qualifier: 'VacationEntitlementDetails' }]
-    Employee;
-    
-    @UI.lineItem: [{ position: 10}]
-    @UI.fieldGroup: [{ position: 10, qualifier: 'VacationEntitlementDetails' }]
-    YearOfVacation;
-    
-    @UI.lineItem: [{ position: 20}]
-    @UI.fieldGroup: [{ position: 20, qualifier: 'VacationEntitlementDetails' }]
-    NumberOfVacationDays;
-    
-    @UI.lineItem: [{ position: 30}]
-    @UI.fieldGroup: [{ position: 30, qualifier: 'VacationEntitlementDetails' }]
-    VacationEntitlementID;
-    
-     @UI.fieldGroup: [{ position: 20, qualifier: 'AdminData' }]
-    CreatedBy;
-    
-     @UI.fieldGroup: [{ position: 30, qualifier: 'AdminData' }]
-    CreatedAt;
-    
-     @UI.fieldGroup: [{ position: 40, qualifier: 'AdminData' }]
-    LastChangedBy;
-    
-     @UI.fieldGroup: [{ position: 50, qualifier: 'AdminData' }]
-    LastChangedAt;
+  [
+    { position: 10, targetQualifier: 'VacationEntitlementDetails', label: 'Vacation Entitlement Details', type: #FIELDGROUP_REFERENCE },
+    { position: 20, targetQualifier: 'AdminData', label: 'Administrative Data', type: #FIELDGROUP_REFERENCE }
+  ]
+
+  /* Fields */
+  @UI.fieldGroup: [{ position: 10, qualifier: 'AdminData' }]
+  VacationEntitlementID;
+
+  @UI.fieldGroup: [{ position: 20, qualifier: 'AdminData' }]
+  Employee;
+
+  @UI.lineItem: [{ position: 10 }]
+  @UI.fieldGroup: [{ position: 10, qualifier: 'VacationEntitlementDetails' }]
+  YearOfVacation;
+
+  @UI.lineItem: [{ position: 20 }]
+  @UI.fieldGroup: [{ position: 20, qualifier: 'VacationEntitlementDetails' }]
+  NumberOfVacationDays;
+
+  @UI.lineItem: [{ position: 30 }]
+  @UI.fieldGroup: [{ position: 30, qualifier: 'AdminData' }]
+  CreatedBy;
+
+  @UI.lineItem: [{ position: 40 }]
+  @UI.fieldGroup: [{ position: 40, qualifier: 'AdminData' }]
+  CreatedAt;
+
+  @UI.lineItem: [{ position: 50 }]
+  @UI.fieldGroup: [{ position: 50, qualifier: 'AdminData' }]
+  LastChangedBy;
+
+  @UI.lineItem: [{ position: 60 }]
+  @UI.fieldGroup: [{ position: 60, qualifier: 'AdminData' }]
+  LastChangedAt;
+
 }

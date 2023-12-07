@@ -3,7 +3,7 @@
 { 
     typeNamePlural: 'Employees',
     typeName      : 'Employee',
-    title.value: 'LastName'
+    title.value: 'EmployeeName'
 }
 annotate view ZCPF_EMPLOYEE
     with 
@@ -15,7 +15,7 @@ annotate view ZCPF_EMPLOYEE
  { position: 10, type: #FIELDGROUP_REFERENCE, targetQualifier: 'EmployeeDetails', label: 'Employee Details' },
  { position: 20, type: #FIELDGROUP_REFERENCE, targetQualifier: 'AdminData', label: 'Administrative Data' },
  { position: 30, type: #LINEITEM_REFERENCE, targetElement: '_VacationEntitlements', label: 'Vacation Entitlements' },
- { position: 30, type: #LINEITEM_REFERENCE, targetElement: '_VacationRequests', label: 'Vacation Requests' }
+ { position: 40, type: #LINEITEM_REFERENCE, targetElement: '_VacationRequests', label: 'Vacation Requests' }
  ]
  
   /* Field */
