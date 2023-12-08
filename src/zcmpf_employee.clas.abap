@@ -12,28 +12,27 @@ CLASS zcmpf_employee DEFINITION
 
   " Message Constants
   CONSTANTS:
-       BEGIN OF not_enough_days_available,
+       BEGIN OF days_exceeded,
         msgid TYPE symsgid      VALUE 'ZPF_VAC_REQ',
         msgno TYPE symsgno      VALUE '001',
-        attr1 TYPE scx_attrname VALUE 'begin_date',
-        attr2 TYPE scx_attrname VALUE 'end_date',
-        attr3 TYPE scx_attrname VALUE 'number_of_vacation_days',
-        attr4 TYPE scx_attrname VALUE '',
-      END OF not_enough_days_available.
-
-  CONSTANTS:
-       BEGIN OF dates_in_wrong_order,
-        msgid TYPE symsgid      VALUE 'ZPF_VAC_REQ',
-        msgno TYPE symsgno      VALUE '002',
-        attr1 TYPE scx_attrname VALUE 'begin_date',
-        attr2 TYPE scx_attrname VALUE 'end_date',
+        attr1 TYPE scx_attrname VALUE '',
+        attr2 TYPE scx_attrname VALUE '',
         attr3 TYPE scx_attrname VALUE '',
         attr4 TYPE scx_attrname VALUE '',
-      END OF dates_in_wrong_order.
+      END OF days_exceeded.
+
+  CONSTANTS:
+       BEGIN OF invalid_dates,
+        msgid TYPE symsgid      VALUE 'ZPF_VAC_REQ',
+        msgno TYPE symsgno      VALUE '002',
+        attr1 TYPE scx_attrname VALUE '',
+        attr2 TYPE scx_attrname VALUE '',
+        attr3 TYPE scx_attrname VALUE '',
+        attr4 TYPE scx_attrname VALUE '',
+      END OF invalid_dates.
 
 
-    " Attributs
-    DATA description TYPE /dmo/description.
+    " Attributes
     data begin_date type zpf_vac_req.
     data end_date type zpf_vac_req.
     data number_of_vacation_days type zpf_vac_ent.
@@ -42,10 +41,10 @@ CLASS zcmpf_employee DEFINITION
     " Constructor
     METHODS constructor
       IMPORTING
-        severity type if_abap_behv_message=>t_severity
-        !textid   LIKE if_t100_message=>t100key OPTIONAL
-        !previous LIKE previous OPTIONAL
-        description type /dmo/description OPTIONAL
+        severity     TYPE if_abap_behv_message=>t_severity DEFAULT if_abap_behv_message=>severity-error
+        textid       LIKE if_t100_message=>t100key         DEFAULT if_t100_message=>default_textid
+        !previous    LIKE previous                         OPTIONAL
+        user_name    TYPE syuname                          OPTIONAL
         begin_date type zpf_vac_req OPTIONAL
         end_date type zpf_vac_req OPTIONAL
         number_of_vacation_days type zpf_vac_ent OPTIONAL.
@@ -69,9 +68,6 @@ CLASS zcmpf_employee IMPLEMENTATION.
     ELSE.
       if_t100_message~t100key = textid.
     ENDIF.
-
-    me->description = description.
-    if_abap_behv_message~m_severity = severity.
 
     me->begin_date = begin_date.
     me->end_date = end_date.

@@ -12,9 +12,15 @@ association to parent ZRPF_EMPLOYEE as _Employee on $projection.Employee = _Empl
    employee as Employee,
    year_of_vacation as YearOfVacation,
    number_of_vacation_days as NumberOfVacationDays,
+   
+   /* Administrative Data*/
+   @Semantics.user.createdBy: true
    created_by as CreatedBy,
+   @Semantics.systemDateTime.createdAt: true
    created_at as CreatedAt,
+   @Semantics.user.lastChangedBy: true
    last_changed_by as LastChangedBy,
+   @Semantics.systemDateTime.lastChangedAt: true
    last_changed_at as LastChangedAt,
     
     _Employee

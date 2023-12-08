@@ -14,11 +14,11 @@ authorization master ( instance )
   create;
   update;
   delete;
+
   association _VacationEntitlements { create; with draft; }
   association _VacationRequests { create; with draft; }
 
   validation ValidateDates on save { create;}
-  validation ValidateRequest on save { create; }
 
   draft action Activate optimized;
   draft action Discard;
@@ -27,7 +27,7 @@ authorization master ( instance )
   draft action Resume;
 
   field ( readonly, numbering: managed ) Id;
-
+  field ( readonly ) CreatedAt, CreatedBy, LastChangedAt, LastChangedBy;
 
   mapping for zpf_employee corresponding {
    Id = id;
@@ -52,7 +52,7 @@ authorization dependent by _Employee
   update;
   delete;
   field ( readonly, numbering : managed ) VacationEntitlementID;
-  field ( readonly ) Employee;
+  field ( readonly ) Employee, CreatedAt, CreatedBy, LastChangedAt, LastChangedBy;
   association _Employee {with draft;}
 
   mapping for zpf_vac_ent corresponding
@@ -68,7 +68,7 @@ authorization dependent by _Employee
   }
 }
 
-define behavior for ZRPF_VAC_REQ alias VacationRequests
+define behavior for ZRPF_VAC_REQ alias VacationRequest
 persistent table zpf_vac_req
 draft table zpf_vac_req_d
 lock dependent by _Employee

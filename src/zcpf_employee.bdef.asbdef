@@ -8,14 +8,14 @@ define behavior for ZCPF_EMPLOYEE alias Employee
   use update;
   use delete;
 
-  use association _VacationEntitlements { create; with draft; }
-  use association _VacationRequests { create; with draft; }
-
   use action Activate;
   use action Discard;
   use action Edit;
   use action Prepare;
   use action Resume;
+
+  use association _VacationEntitlements { create; with draft; }
+  use association _VacationRequests { create; with draft; }
 
 }
 
