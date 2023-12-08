@@ -3,18 +3,18 @@
  <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
   <asx:values>
    <DD04V>
-    <ROLLNAME>ZPF_EMPLOYEE_NUMBER</ROLLNAME>
+    <ROLLNAME>ZPF_YEAR_OF_VACATION</ROLLNAME>
     <DDLANGUAGE>E</DDLANGUAGE>
-    <DOMNAME>ZPF_NUMC6</DOMNAME>
+    <DOMNAME>ZPF_NUMC4</DOMNAME>
     <HEADLEN>55</HEADLEN>
     <SCRLEN1>10</SCRLEN1>
     <SCRLEN2>20</SCRLEN2>
     <SCRLEN3>40</SCRLEN3>
-    <DDTEXT>Employee Number</DDTEXT>
-    <REPTEXT>Employee Number</REPTEXT>
-    <SCRTEXT_S>EmpNum</SCRTEXT_S>
-    <SCRTEXT_M>Employee Number</SCRTEXT_M>
-    <SCRTEXT_L>Employee Number</SCRTEXT_L>
+    <DDTEXT>Year of Vacation</DDTEXT>
+    <REPTEXT>Year of Vacation</REPTEXT>
+    <SCRTEXT_S>Vac Year</SCRTEXT_S>
+    <SCRTEXT_M>Year of Vacation</SCRTEXT_M>
+    <SCRTEXT_L>Year of Vacation</SCRTEXT_L>
     <DTELMASTER>E</DTELMASTER>
     <REFKIND>D</REFKIND>
     <ABAP_LANGUAGE_VERSION>5</ABAP_LANGUAGE_VERSION>
