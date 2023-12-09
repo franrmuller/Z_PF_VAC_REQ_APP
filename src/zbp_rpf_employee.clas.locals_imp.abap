@@ -24,7 +24,7 @@ CLASS lhc_Employee IMPLEMENTATION.
     DATA message TYPE REF TO zcmpf_employee.
 
     " Read Vacation Requests
-    READ ENTITY IN LOCAL MODE ZRPF_vac_REQ
+    READ ENTITY IN LOCAL MODE ZRPF_VAC_REQ
          FIELDS ( BeginDate EndDate )
          WITH CORRESPONDING #( keys )
          RESULT DATA(vacationRequests).
@@ -53,7 +53,7 @@ CLASS lhc_Employee IMPLEMENTATION.
            UPDATE FIELDS ( Status )
            WITH VALUE #( FOR v IN vacationrequests
                          ( %tky   = v-%tky
-                           Status = 'R' ) ).
+                           Status = 'B' ) ).
   ENDMETHOD.
 
   METHOD determinestatusrequestcomment.
@@ -68,6 +68,6 @@ CLASS lhc_Employee IMPLEMENTATION.
            UPDATE FIELDS ( Status )
            WITH VALUE #( FOR v IN vacationrequests
                          ( %tky   = v-%tky
-                           Status = 'R' ) ).
+                           Status = 'Beantragt.' ) ).
   ENDMETHOD.
 ENDCLASS.

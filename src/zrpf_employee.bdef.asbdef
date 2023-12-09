@@ -41,6 +41,8 @@ authorization master ( instance )
    }
 }
 
+
+
 define behavior for ZRPF_VAC_ENT alias VacationEntitlement
 persistent table zpf_vac_ent
 draft table zpf_vac_ent_d
@@ -51,11 +53,11 @@ authorization dependent by _Employee
   update;
   delete;
 
+  association _Employee {with draft;}
+
   field ( readonly, numbering : managed ) VacationEntitlementID;
   field ( readonly ) Employee, YearOfVacation, NumberOfVacationDays,
   CreatedAt, CreatedBy, LastChangedAt, LastChangedBy;
-
-  association _Employee {with draft;}
 
   mapping for zpf_vac_ent corresponding
   {
@@ -97,9 +99,7 @@ authorization dependent by _Employee
 
   field ( readonly, numbering : managed ) VacationRequestId;
   field (mandatory : create ) BeginDate, EndDate, Approver;
-  field (readonly : update ) BeginDate, EndDate, Approver;
-  field (readonly) Applicant, Status, VacationDays,
-  CreatedAt, CreatedBy, LastChangedBy, LastChangedAt;
+  field (readonly : update ) BeginDate, EndDate, Applicant;
 
   mapping for zpf_vac_req corresponding
   {
@@ -108,11 +108,12 @@ authorization dependent by _Employee
   Approver = approver;
   BeginDate = begin_date;
   EndDate = end_date;
+  VacationDays = vacation_days;
   Commentary = commentary;
   Status = status;
   CreatedBy = created_by;
   CreatedAt = created_at;
   LastChangedBy = last_changed_by;
   LastChangedAt = last_changed_at;
-    }
+  }
 }
