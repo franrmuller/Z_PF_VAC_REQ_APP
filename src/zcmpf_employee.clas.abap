@@ -33,6 +33,7 @@ CLASS zcmpf_employee DEFINITION
 
 
     " Attributes
+    data user_name type syuname.
     data begin_date type zpf_vac_req.
     data end_date type zpf_vac_req.
     data number_of_vacation_days type zpf_vac_ent.
@@ -69,6 +70,7 @@ CLASS zcmpf_employee IMPLEMENTATION.
       if_t100_message~t100key = textid.
     ENDIF.
 
+    me->user_name = user_name.
     me->begin_date = begin_date.
     me->end_date = end_date.
     me->number_of_vacation_days = number_of_vacation_days.

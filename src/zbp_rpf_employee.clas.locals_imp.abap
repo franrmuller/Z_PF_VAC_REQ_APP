@@ -5,7 +5,7 @@ CLASS lhc_Employee DEFINITION INHERITING FROM cl_abap_behavior_handler.
       IMPORTING keys REQUEST requested_authorizations FOR Employee RESULT result.
 
     METHODS validatedates for validate on save
-    importing keys for employee~validatedates.
+    importing keys for vacationRequest~validatedates.
 
     Methods determinestatus for determine on modify
     importing keys for vacationrequest~determinestatus.
