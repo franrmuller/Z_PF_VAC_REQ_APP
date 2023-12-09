@@ -32,8 +32,9 @@ as projection on ZRPF_EMPLOYEE
     LastChangedAt,
     
     /* Transient Data */
-    EmployeeName
+    EmployeeName,
     
     /* Associations */
+    _VacationRequests : redirected to composition child ZCPF_2_VAC_REQ
     
 }
