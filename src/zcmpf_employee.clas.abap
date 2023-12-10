@@ -42,6 +42,48 @@ CLASS zcmpf_employee DEFINITION
       END OF invalid_dates.
 
 
+
+      CONSTANTS:
+       BEGIN OF successfully_approved,
+        msgid TYPE symsgid      VALUE 'ZPF_VAC_REQ',
+        msgno TYPE symsgno      VALUE '004',
+        attr1 TYPE scx_attrname VALUE 'Description',
+        attr2 TYPE scx_attrname VALUE '',
+        attr3 TYPE scx_attrname VALUE '',
+        attr4 TYPE scx_attrname VALUE '',
+      END OF successfully_approved.
+
+      CONSTANTS:
+       BEGIN OF successfully_rejected,
+        msgid TYPE symsgid      VALUE 'ZPF_VAC_REQ',
+        msgno TYPE symsgno      VALUE '005',
+        attr1 TYPE scx_attrname VALUE 'Description',
+        attr2 TYPE scx_attrname VALUE '',
+        attr3 TYPE scx_attrname VALUE '',
+        attr4 TYPE scx_attrname VALUE '',
+      END OF successfully_rejected.
+
+      CONSTANTS:
+       BEGIN OF already_approved,
+        msgid TYPE symsgid      VALUE 'ZPF_VAC_REQ',
+        msgno TYPE symsgno      VALUE '006',
+        attr1 TYPE scx_attrname VALUE 'Description',
+        attr2 TYPE scx_attrname VALUE '',
+        attr3 TYPE scx_attrname VALUE '',
+        attr4 TYPE scx_attrname VALUE '',
+      END OF already_approved.
+
+      CONSTANTS:
+       BEGIN OF already_rejected,
+        msgid TYPE symsgid      VALUE 'ZPF_VAC_REQ',
+        msgno TYPE symsgno      VALUE '007',
+        attr1 TYPE scx_attrname VALUE 'Description',
+        attr2 TYPE scx_attrname VALUE '',
+        attr3 TYPE scx_attrname VALUE '',
+        attr4 TYPE scx_attrname VALUE '',
+      END OF already_rejected.
+
+
     " Attributes
     data user_name type syuname.
     data begin_date type zpf_vac_req.
