@@ -15,5 +15,6 @@ as projection on ZRPF_VAC_ENT
     LastChangedBy,
     LastChangedAt,
     
+    /* Associations */
     _Employee : redirected to parent ZCPF_EMPLOYEE
 }

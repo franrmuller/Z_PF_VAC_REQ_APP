@@ -9,14 +9,15 @@
 annotate view ZCPF_VAC_REQ
     with 
 {
- /* Facets */
+
+    /* Facets */
   @UI.facet:
  [
  { position: 10, type: #FIELDGROUP_REFERENCE, targetQualifier: 'VacationRequestDetails', label: 'Vacatoin Request Details' },
  { position: 20, type: #FIELDGROUP_REFERENCE, targetQualifier: 'AdminData', label: 'Administrative Data' }
  ]
   
-  /* Field */
+    /* Field */
   
     @UI.fieldGroup: [{ position: 10, qualifier: 'AdminData' }]
     VacationRequestId;
@@ -35,17 +36,16 @@ annotate view ZCPF_VAC_REQ
     @UI.fieldGroup: [{ position: 30, qualifier: 'VacationRequestDetails' }]
     EndDate;
     
-    @UI.lineItem: [{ position: 40}]
-    @UI.fieldGroup: [{ position: 40, qualifier: 'VacationRequestDetails' }]
-    VacationDays;
+    // @UI.lineItem: [{ position: 40}]
+    // @UI.fieldGroup: [{ position: 40, qualifier: 'VacationRequestDetails' }]
+    // VacationDays;
     
     @UI.lineItem: [{ position: 50}]
     @UI.fieldGroup: [{ position: 50, qualifier: 'VacationRequestDetails' }]
     Commentary;
     
-    @UI.lineItem: [{ position: 60}]
-    @UI.fieldGroup: [{ position: 60, qualifier: 'VacationRequestDetails' }]
-    
+    @UI.lineItem: [{ position: 60, criticality: 'StatusCriticality', criticalityRepresentation: #WITHOUT_ICON}]
+    @UI.fieldGroup: [{ position: 60, qualifier: 'VacationRequestDetails', criticality: 'StatusCriticality', criticalityRepresentation: #WITHOUT_ICON }]
     Status;
     
      @UI.fieldGroup: [{ position: 40, qualifier: 'AdminData' }]

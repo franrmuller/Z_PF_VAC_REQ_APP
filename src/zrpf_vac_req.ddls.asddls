@@ -11,7 +11,7 @@ association to parent ZRPF_EMPLOYEE as _Employee on $projection.Applicant = _Emp
   approver        as Approver,
   begin_date      as BeginDate,
   end_date        as EndDate,
-  vacation_days as VacationDays,
+  // vacation_days as VacationDays,
   commentary      as Commentary,
   status          as Status,
   
@@ -25,6 +25,13 @@ association to parent ZRPF_EMPLOYEE as _Employee on $projection.Applicant = _Emp
   @Semantics.systemDateTime.lastChangedAt: true
   last_changed_at as LastChangedAt,
   
+  /*Transient Data */
+  case status when 'A' then 3
+             when 'C' then 1
+             else 0
+  end       as StatusCriticality,
+  
+  /* Associations */
   _Employee
      
 }

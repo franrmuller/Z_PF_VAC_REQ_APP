@@ -23,5 +23,6 @@ association to parent ZRPF_EMPLOYEE as _Employee on $projection.Employee = _Empl
    @Semantics.systemDateTime.lastChangedAt: true
    last_changed_at as LastChangedAt,
     
+    /* Associations */
     _Employee
 }

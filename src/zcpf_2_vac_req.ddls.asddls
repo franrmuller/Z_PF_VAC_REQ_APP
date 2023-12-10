@@ -8,7 +8,7 @@ define view entity ZCPF_2_VAC_REQ as projection on ZRPF_VAC_REQ
     Approver,
     BeginDate,
     EndDate,
-    VacationDays,
+    // VacationDays,
     Commentary,
     @Consumption.valueHelpDefinition: [{ entity: { name: 'ZIPF_StatusVH', element: 'Status' } }]
     Status,
