@@ -24,7 +24,6 @@ define behavior for ZCPF_2_VAC_REQ alias VacationRequest
 
   use action ApproveRequest;
   use action DeclineRequest;
-  use action ValidateRequest;
 
   use association _Employee { with draft; }
 }

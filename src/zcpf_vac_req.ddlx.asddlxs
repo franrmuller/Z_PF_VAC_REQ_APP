@@ -16,6 +16,9 @@ annotate view ZCPF_VAC_REQ
  { position: 10, type: #FIELDGROUP_REFERENCE, targetQualifier: 'VacationRequestDetails', label: 'Vacatoin Request Details' },
  { position: 20, type: #FIELDGROUP_REFERENCE, targetQualifier: 'AdminData', label: 'Administrative Data' }
  ]
+ 
+ /* Actions */
+  @UI.lineItem: [{ position: 10, dataAction: 'ShowTestMessage', label: 'Show Test Message', type: #FOR_ACTION }]
   
     /* Field */
   
@@ -38,7 +41,7 @@ annotate view ZCPF_VAC_REQ
     
     @UI.lineItem: [{ position: 40}]
     @UI.fieldGroup: [{ position: 40, qualifier: 'VacationRequestDetails' }]
-    vacationdays;
+    VacationDays;
     
     @UI.lineItem: [{ position: 50}]
     @UI.fieldGroup: [{ position: 50, qualifier: 'VacationRequestDetails' }]

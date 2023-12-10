@@ -12,13 +12,19 @@
      <SPRSL>E</SPRSL>
      <ARBGB>ZPF_EMPLOYEE</ARBGB>
      <MSGNR>001</MSGNR>
-     <TEXT>Days Exceeded</TEXT>
+     <TEXT>You exceeded your Available Days.</TEXT>
     </T100>
     <T100>
      <SPRSL>E</SPRSL>
      <ARBGB>ZPF_EMPLOYEE</ARBGB>
      <MSGNR>002</MSGNR>
-     <TEXT>Invalid Dates</TEXT>
+     <TEXT>Begin Date musst be before End Date. Please try again.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZPF_EMPLOYEE</ARBGB>
+     <MSGNR>003</MSGNR>
+     <TEXT>This is a Test Message from &amp;1</TEXT>
     </T100>
    </T100>
   </asx:values>

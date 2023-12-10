@@ -11,6 +11,8 @@ define behavior for ZCPF_EMPLOYEE alias Employee
   use association _VacationEntitlements { create; with draft; }
   use association _VacationRequests { create; with draft; }
 
+  use action ShowTestMessage;
+
   use action Activate;
   use action Discard;
   use action Edit;
@@ -23,6 +25,7 @@ define behavior for ZCPF_VAC_ENT alias VacationEntitlement
 {
   use update;
   use delete;
+
   use association _Employee { with draft; }
 }
 
@@ -30,8 +33,6 @@ define behavior for ZCPF_VAC_REQ alias VacationRequest
 {
   use update;
   use delete;
-
-  use action ValidateRequest;
 
   use association _Employee { with draft; }
 }

@@ -18,6 +18,8 @@ authorization master ( instance )
   association _VacationEntitlements { create; with draft; }
   association _VacationRequests { create; with draft; }
 
+  static action ShowTestMessage;
+
   draft action Activate optimized;
   draft action Discard;
   draft action Edit;
@@ -87,13 +89,8 @@ authorization dependent by _Employee
   action ApproveRequest result [1] $self;
   action DeclineRequest result [1] $self;
 
-  determination DetermineStatus on modify { create; }
-  determination DetermineStatusRequestComment on modify { field Commentary; }
-
-  determine action ValidateRequest
-  {
-    validation ValidateDates;
-  }
+  determination DetermineStatus on modify { update; create; }
+  determination DetermineStatusRequestComment on modify { update; create; field Commentary; }
 
   validation ValidateDates on save { create; }
 
