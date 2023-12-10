@@ -11,7 +11,7 @@ association to parent ZRPF_EMPLOYEE as _Employee on $projection.Applicant = _Emp
   approver        as Approver,
   begin_date      as BeginDate,
   end_date        as EndDate,
-  // vacation_days as VacationDays,
+  vacation_days as VacationDays,
   commentary      as Commentary,
   status          as Status,
   
