@@ -4,7 +4,6 @@ use draft;
 
 define behavior for ZCPF_EMPLOYEE alias Employee
 {
-
   use create;
   use update;
   use delete;
@@ -22,10 +21,8 @@ define behavior for ZCPF_EMPLOYEE alias Employee
 
 define behavior for ZCPF_VAC_ENT alias VacationEntitlement
 {
-
   use update;
   use delete;
-
   use association _Employee { with draft; }
 }
 
@@ -34,8 +31,7 @@ define behavior for ZCPF_VAC_REQ alias VacationRequest
   use update;
   use delete;
 
-  use action ApproveRequest;
-  use action DeclineRequest;
+  use action ValidateRequest;
 
   use association _Employee { with draft; }
 }

@@ -99,7 +99,7 @@ authorization dependent by _Employee
 
   field ( readonly, numbering : managed ) VacationRequestId;
   field ( mandatory : create ) BeginDate, EndDate, Approver;
-  field ( readonly : update ) BeginDate, EndDate, Approver;
+  field ( readonly : update ) Approver;
   field ( readonly ) Applicant, Status, VacationDays, CreatedAt, CreatedBy, LastChangedAt, LastChangedBy;
 
   mapping for zpf_vac_req corresponding

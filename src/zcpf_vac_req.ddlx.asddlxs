@@ -36,9 +36,9 @@ annotate view ZCPF_VAC_REQ
     @UI.fieldGroup: [{ position: 30, qualifier: 'VacationRequestDetails' }]
     EndDate;
     
-    // @UI.lineItem: [{ position: 40}]
-    // @UI.fieldGroup: [{ position: 40, qualifier: 'VacationRequestDetails' }]
-    // VacationDays;
+    @UI.lineItem: [{ position: 40}]
+    @UI.fieldGroup: [{ position: 40, qualifier: 'VacationRequestDetails' }]
+    vacationdays;
     
     @UI.lineItem: [{ position: 50}]
     @UI.fieldGroup: [{ position: 50, qualifier: 'VacationRequestDetails' }]

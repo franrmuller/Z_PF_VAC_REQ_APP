@@ -12,13 +12,13 @@
      <SPRSL>E</SPRSL>
      <ARBGB>ZPF_EMPLOYEE</ARBGB>
      <MSGNR>001</MSGNR>
-     <TEXT>Days slected exceed number of available days. Please adjust your request.</TEXT>
+     <TEXT>Days Exceeded</TEXT>
     </T100>
     <T100>
      <SPRSL>E</SPRSL>
      <ARBGB>ZPF_EMPLOYEE</ARBGB>
      <MSGNR>002</MSGNR>
-     <TEXT>Starting date happens after end date. Please choose dates again.</TEXT>
+     <TEXT>Invalid Dates</TEXT>
     </T100>
    </T100>
   </asx:values>

@@ -59,22 +59,15 @@ CLASS zcmpf_employee IMPLEMENTATION.
 
 
   METHOD constructor ##ADT_SUPPRESS_GENERATION.
-    CALL METHOD super->constructor
-      EXPORTING
-        previous = previous.
+    super->constructor(  previous = previous ).
 
-    CLEAR me->textid.
-    IF textid IS INITIAL.
-      if_t100_message~t100key = if_t100_message=>default_textid.
-    ELSE.
-      if_t100_message~t100key = textid.
-    ENDIF.
+    if_t100_message~t100key = textid.
+    if_abap_behv_message~m_severity = severity.
 
     me->user_name = user_name.
     me->begin_date = begin_date.
     me->end_date = end_date.
     me->number_of_vacation_days = number_of_vacation_days.
-    if_abap_behv_message~m_severity = severity.
   ENDMETHOD.
 
 ENDCLASS.

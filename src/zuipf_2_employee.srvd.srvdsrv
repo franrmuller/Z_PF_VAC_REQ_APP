@@ -1,4 +1,4 @@
-@EndUserText.label: 'Employee'
+@EndUserText.label: 'Approver'
 define service ZUIPF_2_Employee {
   expose ZCPF_2_EMPLOYEE as Approver;
   expose ZCPF_2_VAC_REQ  as VacationRequest;

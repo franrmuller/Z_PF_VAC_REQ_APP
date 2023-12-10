@@ -1,9 +1,9 @@
 @Metadata.layer: #CUSTOMER
 @UI.headerInfo: 
 { 
-    typeNamePlural: 'Applicant',
-    typeName      : 'Applicant',
-    title.value: 'EmployeeName'
+    typeNamePlural: 'Approver',
+    typeName      : 'Approver',
+    title.value: '_VacationRequests.Approver'
 }
 annotate view ZCPF_2_EMPLOYEE
     with 
