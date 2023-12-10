@@ -1,5 +1,6 @@
-@AccessControl.authorizationCheck: #NOT_REQUIRED
 @EndUserText.label: 'Vacation Request'
+@AccessControl.authorizationCheck: #NOT_REQUIRED
+@Search.searchable: true
 @Metadata.allowExtensions: true
 define view entity ZCPF_2_VAC_REQ as projection on ZRPF_VAC_REQ
 {
@@ -9,6 +10,8 @@ define view entity ZCPF_2_VAC_REQ as projection on ZRPF_VAC_REQ
     BeginDate,
     EndDate,
     VacationDays,
+    @Search.defaultSearchElement: true
+    @Search.fuzzinessThreshold: 0.7
     Commentary,
     @Consumption.valueHelpDefinition: [{ entity: { name: 'ZIPF_StatusVH', element: 'Status' } }]
     Status,
