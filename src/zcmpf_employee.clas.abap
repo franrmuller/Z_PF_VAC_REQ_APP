@@ -23,7 +23,7 @@ CLASS zcmpf_employee DEFINITION
 
   CONSTANTS:
        BEGIN OF days_exceeded,
-        msgid TYPE symsgid      VALUE 'ZPF_VAC_REQ',
+        msgid TYPE symsgid      VALUE 'ZPF_EMPLOYEE',
         msgno TYPE symsgno      VALUE '001',
         attr1 TYPE scx_attrname VALUE '',
         attr2 TYPE scx_attrname VALUE '',
@@ -33,7 +33,7 @@ CLASS zcmpf_employee DEFINITION
 
   CONSTANTS:
        BEGIN OF invalid_dates,
-        msgid TYPE symsgid      VALUE 'ZPF_VAC_REQ',
+        msgid TYPE symsgid      VALUE 'ZPF_EMPLOYEE',
         msgno TYPE symsgno      VALUE '002',
         attr1 TYPE scx_attrname VALUE '',
         attr2 TYPE scx_attrname VALUE '',
@@ -45,7 +45,7 @@ CLASS zcmpf_employee DEFINITION
 
       CONSTANTS:
        BEGIN OF successfully_approved,
-        msgid TYPE symsgid      VALUE 'ZPF_VAC_REQ',
+        msgid TYPE symsgid      VALUE 'ZPF_EMPLOYEE',
         msgno TYPE symsgno      VALUE '004',
         attr1 TYPE scx_attrname VALUE 'Commentary',
         attr2 TYPE scx_attrname VALUE '',
@@ -55,7 +55,7 @@ CLASS zcmpf_employee DEFINITION
 
       CONSTANTS:
        BEGIN OF successfully_rejected,
-        msgid TYPE symsgid      VALUE 'ZPF_VAC_REQ',
+        msgid TYPE symsgid      VALUE 'ZPF_EMPLOYEE',
         msgno TYPE symsgno      VALUE '005',
         attr1 TYPE scx_attrname VALUE 'Commentary',
         attr2 TYPE scx_attrname VALUE '',
@@ -65,7 +65,7 @@ CLASS zcmpf_employee DEFINITION
 
       CONSTANTS:
        BEGIN OF already_approved,
-        msgid TYPE symsgid      VALUE 'ZPF_VAC_REQ',
+        msgid TYPE symsgid      VALUE 'ZPF_EMPLOYEE',
         msgno TYPE symsgno      VALUE '006',
         attr1 TYPE scx_attrname VALUE 'Commentary',
         attr2 TYPE scx_attrname VALUE '',
@@ -75,7 +75,7 @@ CLASS zcmpf_employee DEFINITION
 
       CONSTANTS:
        BEGIN OF already_rejected,
-        msgid TYPE symsgid      VALUE 'ZPF_VAC_REQ',
+        msgid TYPE symsgid      VALUE 'ZPF_EMPLOYEE',
         msgno TYPE symsgno      VALUE '007',
         attr1 TYPE scx_attrname VALUE 'Commentary',
         attr2 TYPE scx_attrname VALUE '',
@@ -102,7 +102,7 @@ CLASS zcmpf_employee DEFINITION
         begin_date type zpf_vac_req OPTIONAL
         end_date type zpf_vac_req OPTIONAL
         number_of_vacation_days type zpf_vac_ent OPTIONAL
-        !Commentary type zpf_comment optional.
+        Commentary type zpf_comment optional.
   PROTECTED SECTION.
   PRIVATE SECTION.
 ENDCLASS.

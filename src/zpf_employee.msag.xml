@@ -30,25 +30,25 @@
      <SPRSL>E</SPRSL>
      <ARBGB>ZPF_EMPLOYEE</ARBGB>
      <MSGNR>004</MSGNR>
-     <TEXT>The Vacation Request %1 has been successfully rejected.</TEXT>
+     <TEXT>The Vacation Request &amp;1 has been successfully rejected.</TEXT>
     </T100>
     <T100>
      <SPRSL>E</SPRSL>
      <ARBGB>ZPF_EMPLOYEE</ARBGB>
      <MSGNR>005</MSGNR>
-     <TEXT>The Vacation Request %1 has been successfully rejected.</TEXT>
+     <TEXT>The Vacation Request &amp;1 has been successfully rejected.</TEXT>
     </T100>
     <T100>
      <SPRSL>E</SPRSL>
      <ARBGB>ZPF_EMPLOYEE</ARBGB>
      <MSGNR>006</MSGNR>
-     <TEXT>The Vacation Request %1 has aready been approved.</TEXT>
+     <TEXT>The Vacation Request &amp;1 has aready been approved.</TEXT>
     </T100>
     <T100>
      <SPRSL>E</SPRSL>
      <ARBGB>ZPF_EMPLOYEE</ARBGB>
      <MSGNR>007</MSGNR>
-     <TEXT>The Vacation Request %1 has already been rejected.</TEXT>
+     <TEXT>The Vacation Request &amp;1 has already been rejected.</TEXT>
     </T100>
    </T100>
   </asx:values>

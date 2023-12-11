@@ -23,6 +23,8 @@ define behavior for ZCPF_EMPLOYEE alias Employee
 
 define behavior for ZCPF_VAC_ENT alias VacationEntitlement
 {
+  use update;
+  use delete;
 
   use association _Employee { with draft; }
 }

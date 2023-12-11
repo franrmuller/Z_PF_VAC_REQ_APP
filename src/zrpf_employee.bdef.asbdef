@@ -89,16 +89,16 @@ authorization dependent by _Employee
   action ApproveRequest result [1] $self;
   action DeclineRequest result [1] $self;
 
-  determination DetermineStatus on modify { update; create; }
-  determination DetermineStatusRequestComment on modify { update; create; field Commentary; }
+  determination DetermineStatus on modify { field commentary; }
+//  determination DetermineStatusRequestComment on modify { update; create; field Commentary; }
 //  determination DetermineUsedVacationDays on modify { update; create; }
 //  determination DetermineAvailableDays on modify { update; create; }
 //  determination DeterminePlannedDays on modify { update; create; }
 
-  determine action ValidateRequest
-  {
+  determine action ValidateRequest {
     validation ValidateDates;
   }
+
   validation ValidateDates on save { create; }
 
   field ( readonly, numbering : managed ) VacationRequestId;
