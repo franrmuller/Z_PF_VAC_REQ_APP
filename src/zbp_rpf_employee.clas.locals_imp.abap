@@ -15,13 +15,10 @@ CLASS lhc_Employee DEFINITION INHERITING FROM cl_abap_behavior_handler.
 
     Methods determinestatus for determine on modify
     importing keys for Vacationrequest~determinestatus.
-*
-*    methods DetermineStatusRequestComment for determine on modify
-*    importing keys for Vacationrequest~DetermineStatusRequestComment.
 
     methods ApproveRequest for modify
       importing keys for action VacationRequest~ApproveRequest result result.
-*
+
     methods DeclineRequest for modify
       importing keys for action VacationRequest~DeclineRequest result result.
 
@@ -78,20 +75,6 @@ CLASS lhc_Employee IMPLEMENTATION.
                            Status = 'R' ) ).
   ENDMETHOD.
 
-*  METHOD determinestatusrequestcomment.
-*    " Read Vacation Requests
-*    READ ENTITY IN LOCAL MODE ZRpf_vac_req
-*         FIELDS ( Status )
-*         WITH CORRESPONDING #( keys )
-*         RESULT DATA(vacationrequests).
-*
-*    " Modify Travels
-*    MODIFY ENTITY IN LOCAL MODE ZRpf_vac_req
-*           UPDATE FIELDS ( Status )
-*           WITH VALUE #( FOR v IN vacationrequests
-*                         ( %tky   = v-%tky
-*                           Status = 'R' ) ).
-*  ENDMETHOD.
   METHOD get_instance_authorizations_1.
   ENDMETHOD.
 
@@ -119,7 +102,7 @@ CLASS lhc_Employee IMPLEMENTATION.
       ENDIF.
 
       " Set Status to Approved  and Create Success Message
-      VacationRequest->Status = 'R'.
+      VacationRequest->Status = 'A'.
       message = NEW zcmpf_employee( severity = if_abap_behv_message=>severity-success
                                 textid   = zcmpf_employee=>successfully_approved
                                 Commentary   = VacationRequest->Commentary ).
@@ -152,7 +135,7 @@ CLASS lhc_Employee IMPLEMENTATION.
     " Process Vacation Request
     LOOP AT vacationrequests REFERENCE INTO DATA(VacationRequest).
       " Validate Status and Create Error Message
-      IF vacationrequest->Status = 'R'.
+      IF vacationrequest->Status = 'C'.
         message = NEW zcmpf_employee( textid = zcmpf_employee=>already_rejected
                                   Commentary = VacationRequest->Commentary ).
         APPEND VALUE #( %tky     = vacationrequest->%tky
@@ -164,7 +147,7 @@ CLASS lhc_Employee IMPLEMENTATION.
       ENDIF.
 
       " Set Status to Approved  and Create Success Message
-      VacationRequest->Status = 'R'.
+      VacationRequest->Status = 'C'.
       message = NEW zcmpf_employee( severity = if_abap_behv_message=>severity-success
                                 textid   = zcmpf_employee=>successfully_approved
                                 Commentary   = VacationRequest->Commentary ).
