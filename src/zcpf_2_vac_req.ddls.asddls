@@ -23,6 +23,9 @@ define view entity ZCPF_2_VAC_REQ as projection on ZRPF_VAC_REQ
     LastChangedBy,
     LastChangedAt,
     
+    /* Transient Data */
+    StatusCriticality,
+    
     /* Associations */
     _Employee : redirected to parent ZCPF_2_EMPLOYEE
   

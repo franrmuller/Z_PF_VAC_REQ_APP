@@ -14,7 +14,7 @@ CLASS zcmpf_employee DEFINITION
       CONSTANTS:
       BEGIN OF test_message,
         msgid TYPE symsgid      VALUE 'ZPF_EMPLOYEE',
-        msgno TYPE symsgno      VALUE '001',
+        msgno TYPE symsgno      VALUE '003',
         attr1 TYPE scx_attrname VALUE 'USER_NAME',
         attr2 TYPE scx_attrname VALUE '',
         attr3 TYPE scx_attrname VALUE '',

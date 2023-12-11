@@ -30,7 +30,7 @@
      <SPRSL>E</SPRSL>
      <ARBGB>ZPF_EMPLOYEE</ARBGB>
      <MSGNR>004</MSGNR>
-     <TEXT>The Vacation Request &amp;1 has been successfully rejected.</TEXT>
+     <TEXT>The Vacation Request &amp;1 has been successfully approved.</TEXT>
     </T100>
     <T100>
      <SPRSL>E</SPRSL>
