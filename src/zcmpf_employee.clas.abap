@@ -47,7 +47,7 @@ CLASS zcmpf_employee DEFINITION
        BEGIN OF successfully_approved,
         msgid TYPE symsgid      VALUE 'ZPF_VAC_REQ',
         msgno TYPE symsgno      VALUE '004',
-        attr1 TYPE scx_attrname VALUE 'Description',
+        attr1 TYPE scx_attrname VALUE 'Commentary',
         attr2 TYPE scx_attrname VALUE '',
         attr3 TYPE scx_attrname VALUE '',
         attr4 TYPE scx_attrname VALUE '',
@@ -57,7 +57,7 @@ CLASS zcmpf_employee DEFINITION
        BEGIN OF successfully_rejected,
         msgid TYPE symsgid      VALUE 'ZPF_VAC_REQ',
         msgno TYPE symsgno      VALUE '005',
-        attr1 TYPE scx_attrname VALUE 'Description',
+        attr1 TYPE scx_attrname VALUE 'Commentary',
         attr2 TYPE scx_attrname VALUE '',
         attr3 TYPE scx_attrname VALUE '',
         attr4 TYPE scx_attrname VALUE '',
@@ -67,7 +67,7 @@ CLASS zcmpf_employee DEFINITION
        BEGIN OF already_approved,
         msgid TYPE symsgid      VALUE 'ZPF_VAC_REQ',
         msgno TYPE symsgno      VALUE '006',
-        attr1 TYPE scx_attrname VALUE 'Description',
+        attr1 TYPE scx_attrname VALUE 'Commentary',
         attr2 TYPE scx_attrname VALUE '',
         attr3 TYPE scx_attrname VALUE '',
         attr4 TYPE scx_attrname VALUE '',
@@ -77,7 +77,7 @@ CLASS zcmpf_employee DEFINITION
        BEGIN OF already_rejected,
         msgid TYPE symsgid      VALUE 'ZPF_VAC_REQ',
         msgno TYPE symsgno      VALUE '007',
-        attr1 TYPE scx_attrname VALUE 'Description',
+        attr1 TYPE scx_attrname VALUE 'Commentary',
         attr2 TYPE scx_attrname VALUE '',
         attr3 TYPE scx_attrname VALUE '',
         attr4 TYPE scx_attrname VALUE '',
@@ -89,7 +89,7 @@ CLASS zcmpf_employee DEFINITION
     data begin_date type zpf_vac_req.
     data end_date type zpf_vac_req.
     data number_of_vacation_days type zpf_vac_ent.
-    data description type /dmo/description.
+    data Commentary type zpf_comment.
 
 
     " Constructor
@@ -102,7 +102,7 @@ CLASS zcmpf_employee DEFINITION
         begin_date type zpf_vac_req OPTIONAL
         end_date type zpf_vac_req OPTIONAL
         number_of_vacation_days type zpf_vac_ent OPTIONAL
-        !description type /dmo/description optional.
+        !Commentary type zpf_comment optional.
   PROTECTED SECTION.
   PRIVATE SECTION.
 ENDCLASS.
@@ -122,7 +122,7 @@ CLASS zcmpf_employee IMPLEMENTATION.
     me->begin_date = begin_date.
     me->end_date = end_date.
     me->number_of_vacation_days = number_of_vacation_days.
-    me->description = description.
+    me->Commentary = Commentary.
   ENDMETHOD.
 
 ENDCLASS.

@@ -70,7 +70,7 @@ out->write(  |Deleted Vacation Requests: { sy-dbcnt }| ).
   GET TIME STAMP FIELD employee-last_changed_at.
   APPEND employee TO employees.
 
-  employee-employee_number = 1.
+  employee-employee_number = 3.
   employee-client        = sy-mandt.
   employee-first_name = 'Petra'.
   employee-last_name = 'Schmidt'.

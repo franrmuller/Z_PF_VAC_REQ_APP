@@ -24,7 +24,6 @@ annotate view ZCPF_2_VAC_REQ
     Approver;
     
     @UI.fieldGroup: [{ position: 30, qualifier: 'AdminData' }]
-    @UI.selectionField: [{ position: 10 }]
     Applicant;
     
     @UI.lineItem: [{ position: 20}]
@@ -46,7 +45,6 @@ annotate view ZCPF_2_VAC_REQ
     @UI.lineItem: [{ position: 60}]
     @UI.fieldGroup: [{ position: 60, qualifier: 'VacationRequestDetails' }]
     
-    @UI.selectionField: [{ position: 20 }]
     Status;
     
      @UI.fieldGroup: [{ position: 40, qualifier: 'AdminData' }]

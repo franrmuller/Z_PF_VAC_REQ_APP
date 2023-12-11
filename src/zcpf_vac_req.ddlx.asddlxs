@@ -16,10 +16,6 @@ annotate view ZCPF_VAC_REQ
  { position: 10, type: #FIELDGROUP_REFERENCE, targetQualifier: 'VacationRequestDetails', label: 'Vacatoin Request Details' },
  { position: 20, type: #FIELDGROUP_REFERENCE, targetQualifier: 'AdminData', label: 'Administrative Data' }
  ]
- 
- /* Actions */
- // @UI.lineItem: [{ position: 10, dataAction: 'ShowTestMessage', label: 'Show Test Message', type: #FOR_ACTION }]
-  
     /* Field */
   
     @UI.fieldGroup: [{ position: 10, qualifier: 'AdminData' }]
