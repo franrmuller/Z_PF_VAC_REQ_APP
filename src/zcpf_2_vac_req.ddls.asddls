@@ -5,6 +5,8 @@
 define view entity ZCPF_2_VAC_REQ as projection on ZRPF_VAC_REQ
 {
         key VacationRequestId,
+    
+    @Consumption.valueHelpDefinition: [{ entity: {name: 'ZIPF_APPROVERVH', element: 'Id' } }]
     Applicant,
     Approver,
     BeginDate,
@@ -13,7 +15,6 @@ define view entity ZCPF_2_VAC_REQ as projection on ZRPF_VAC_REQ
     @Search.defaultSearchElement: true
     @Search.fuzzinessThreshold: 0.7
     Commentary,
-    @Consumption.valueHelpDefinition: [{ entity: { name: 'ZIPF_StatusVH', element: 'Status' } }]
     Status,
    
     /* Administrative Data */
